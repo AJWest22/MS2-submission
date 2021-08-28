@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.fort-assassin {
+.grid-assassin {
     width: 600px;
     height: 600px;
     display: flex;
@@ -11,12 +11,12 @@
     margin: 40px;
 }
 
-.fort div {
+.grid div {
     width: 60px;
     height: 60px;
 }
 
-.fort-templar {
+.grid-templar {
     width: 600px;
     height: 600px;
     display: flex;
@@ -25,7 +25,7 @@
     margin: 40px;
 }
 
-.fort-display {
+.grid-display {
     width: 500px;
     height: 500px;
     margin: 40px;
@@ -75,4 +75,24 @@
 .army div {
     width: 80px;
     height: 80px;
+}
+
+.lookoutpost {
+    background-color: brown;
+}
+
+.footsoldiers {
+    background-color: yellow;
+}
+
+.supplies {
+    background-color: pink;
+}
+
+.knights {
+    background-color: black;
+}
+
+.templars {
+    background-color: red;
 }

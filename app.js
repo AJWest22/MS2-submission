@@ -1,39 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const assassinsGrid = document.getElementsByClassName('assassin-fort')
-    const templarsFort = document.getElementsByClassName('templar-fort')
-    const displayFort = document.getElementsByClassName('fort-display')
+    const assassinsGrid = document.querySelector('.grid-assassin')
+    const templarsGrid = document.querySelector('.grid-templar')
+    const gridDisplay = document.querySelector('.grid-display')
     const armies = document.querySelectorAll('.army')
-    const lookoutPost = document.getElementsByClassName('lookoutpost-container')
-    const footSoldiers = document.getElementsByClassName('footsoldiers-container')
-    const supplies = document.getElementsByClassName('supplies-container')
-    const knights = document.getElementsByClassName('knights-container')
-    const templars = document.getElementsByClassName('templars-container')
-    const attackButton = document.getElementById('attack')
-    const rotateButton = document.getElementById('rotate')
-    const displayTurn = document.getElementById('whose-turn')
-    const infoDisplay = document.getElementById('info')
+    const lookoutPost = document.querySelector('.lookoutpost-container')
+    const footSoldiers = document.querySelector('.footsoldiers-container')
+    const supplies = document.querySelector('.supplies-container')
+    const knights = document.querySelector('.knights-container')
+    const templars = document.querySelector('.templars-container')
+    const attackButton = document.querySelector('#attack')
+    const rotateButton = document. querySelector('#rotate')
+    const turnDisplay = document.querySelector('#whose-turn')
+    const infoDisplay = document.querySelector('#info')
     const assassinsSquares = []
     const templarSquares = []
 
     const width = 10
 
     //creates the Fort's squares
-    function createFort(fort, squares) {
+    function createBoard(grid, squares) {
         for (let i = 0; i < width*width; i++) {
           const square = document.createElement('div')
           square.dataset.id = i
-          fort.appendChild(square)
+          grid.appendChild(square)
           squares.push(square)
         }
     }
-    createFort(assassinsGrid, assassinsSquares)
-    createFort(templarsFort, templarSquares)
+    createBoard(assassinsGrid, assassinsSquares)
+    createBoard(templarsGrid, templarSquares)
 
     // army squads generate randomly
     const armyArray = [
         {
             name: 'lookoutpost',
-            positions: [
+            directions: [
                 [0, 1],
                 [0, width]
             ]
@@ -69,4 +69,24 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     //Randomly places the templars army
+    function generate(army) {
+        let randomPosition = Math.floor(Math.random() * army.directions.length)
+        let current = army.directions[randomPosition]
+        if (randomPosition === 0) position = 1
+        if (randomPosition === 1) position = 10
+        let randomStart= Math.abs(Math.floor(Math.random() * templarSquares.length - (army.directions[0].length * position)))
+
+        const isLost = current.some(index => templarSquares[randomStart + index].classList.contains('lost'))
+        const isAtRightHandSide = current.some(index => (randomStart + index) % width === width -1)
+        const isAtLeftHandSide = current.some(index => (randomStart + index) % width === 0)
+
+        if (!isLost && !isAtRightHandSide && !isAtLeftHandSide) current.forEach(index => templarSquares[randomStart + index].classList.add('lost', army.name))
+
+        else generate(army)
+    }
+    generate(armyArray[0])
+    generate(armyArray[1])
+    generate(armyArray[2])
+    generate(armyArray[3])
+    generate(armyArray[4])
 })
