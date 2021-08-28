@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+}
+
+.fort-assassin {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgreen;
+    margin: 40px;
+}
+
+.fort div {
+    width: 60px;
+    height: 60px;
+}
+
+.fort-templar {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgreen;
+    margin: 40px;
+}
+
+.fort-display {
+    width: 500px;
+    height: 500px;
+    margin: 40px;
+    background-color: indigo;
+}
+
+.lookoutpost-container {
+    width: 80px;
+    height: 40px;
+    background-color: brown;
+    margin: 20px;
+    display: flex;
+}
+
+.footsoldiers-container {
+    width: 120px;
+    height: 40px;
+    background-color: yellow;
+    margin: 20px;
+    display: flex;
+}
+
+.supplies-container {
+    width: 120px;
+    height: 40px;
+    background-color: pink;
+    margin: 20px;
+    display: flex;
+}
+
+.knights-container {
+    width: 160px;
+    height: 40px;
+    background-color: black;
+    margin: 20px;
+    display: flex;
+}
+
+.templars-container {
+    width: 200px;
+    height: 40px;
+    background-color: red;
+    margin: 20px;
+    display: flex;
+}
+
+.army div {
+    width: 80px;
+    height: 80px;
+}
