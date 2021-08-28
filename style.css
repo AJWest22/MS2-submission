@@ -40,12 +40,30 @@
     display: flex;
 }
 
+.lookoutpost-vertical-container{
+    width: 40px;
+    height: 80px;
+    background-color: brown;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .footsoldiers-container {
     width: 120px;
     height: 40px;
     background-color: yellow;
     margin: 20px;
     display: flex;
+}
+
+.footsoldiers-vertical-container {
+    width: 40px;
+    height: 120px;
+    background-color: yellow;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .supplies-container {
@@ -56,6 +74,15 @@
     display: flex;
 }
 
+.supplies-vertical-container {
+    width: 40px;
+    height: 120px;
+    background-color: pink;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .knights-container {
     width: 160px;
     height: 40px;
@@ -64,12 +91,30 @@
     display: flex;
 }
 
+.knights-vertical-container {
+    width: 40px;
+    height: 160px;
+    background-color: black;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .templars-container {
     width: 200px;
     height: 40px;
     background-color: red;
     margin: 20px;
     display: flex;
+}
+
+.templars-vertical-container {
+    width: 40px;
+    height: 200px;
+    background-color: red;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .army div {

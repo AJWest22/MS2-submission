@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const infoDisplay = document.querySelector('#info')
     const assassinsSquares = []
     const templarSquares = []
-
+    let isHorizontal = true
     const width = 10
 
     //creates the Fort's squares
@@ -89,4 +89,32 @@ document.addEventListener('DOMContentLoaded', () => {
     generate(armyArray[2])
     generate(armyArray[3])
     generate(armyArray[4])
+
+    //makes the players (assassin's) armies rotate
+
+    function rotate() {
+        if (isHorizontal) {
+            lookoutPost.classList.toggle('lookoutpost-vertical-container')
+            footSoldiers.classList.toggle('footsoldiers-vertical-container')
+            supplies.classList.toggle('supplies-vertical-container')
+            knights.classList.toggle('knights-vertical-container')
+            templars.classList.toggle('templars-vertical-container')
+            isHorizontal = false
+            console.log(isHorizontal)
+            return
+        }
+        if (!isHorizontal) {
+            lookoutPost.classList.toggle('lookoutpost-vertical-container')
+            footSoldiers.classList.toggle('footsoldiers-vertical-container')
+            supplies.classList.toggle('supplies-vertical-container')
+            knights.classList.toggle('knights-vertical-container')
+            templars.classList.toggle('templars-vertical-container')
+            isHorizontal = true
+            console.log(isHorizontal)
+            return
+        }
+    }
+    rotateButton.addEventListener('click', rotate)
+
+    
 })
