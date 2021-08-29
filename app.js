@@ -228,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             square.classList.add('missed')
         }
+        checkWins()
         currentPlayer = 'templar'
         gamePlay()
     }
@@ -251,5 +252,60 @@ document.addEventListener('DOMContentLoaded', () => {
         } else templarGo()
             currentPlayer = 'assassin'
             turnDisplay.innerHTML = 'Assassin Go'
+    }
+
+    function checkWins() {
+        if (lookoutpostCount === 2) {
+            infoDisplay.innerHTML = 'You hit the Templars lookoutpost!'
+            lookoutpostCount = 10
+        }
+        if (footsoldiersCount === 3) {
+            infoDisplay.innerHTML = 'You hit the Templars footsoldiers!'
+            footsoldiersCount = 10
+        }
+        if (suppliesCount === 3) {
+            infoDisplay.innerHTML = 'You hit the Templars supplies!'
+            suppliesCount = 10
+        }
+        if (knightsCount === 4) {
+            infoDisplay.innerHTML = 'You hit the Templars knights!'
+            knightsCount = 10
+        }
+        if (templarsCount === 5) {
+            infoDisplay.innerHTML = 'You hit the Templars knights!'
+            templarsCount = 10
+        }
+        if (templarLookoutpostCount === 2) {
+            infoDisplay.innerHTML = 'You hit the Templars lookoutpost!'
+            templarLookoutpostCount = 10
+        }
+        if (templarFootsoldiersCount === 3) {
+            infoDisplay.innerHTML = 'You hit the Templars footsoldiers!'
+            templarFootsoldiersCount = 10
+        }
+        if (templarSuppliesCount === 3) {
+            infoDisplay.innerHTML = 'You hit the Templars supplies!'
+            templarSuppliesCount = 10
+        }
+        if (templarKnightsCount === 4) {
+            infoDisplay.innerHTML = 'You hit the Templars knights!'
+            templarKnightsCount = 10
+        }
+        if (templarTemplarsCount === 5) {
+            infoDisplay.innerHTML = 'You hit the Templars knights!'
+            templarTemplarsCount = 10
+        }
+        if ((lookoutpostCount + footsoldiersCount + suppliesCount + knightsCount + templarsCount) === 50) {
+            infoDisplay.innerHTML = "Assassin Wins!"
+            gameOver()
+        }
+        if ((templarLookoutpostCount + templarFootsoldiersCount + templarSuppliesCount + templarKnightsCount + templarTemplarsCount) === 50) {
+            infoDisplay.innerHTML = "Templar Wins!"
+            gameOver()
+        }
+    }
+    function gameOver() {
+        isGameOver = true
+        attackButton.removeEventListener('click', gamePlay)
     }
 })
