@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const templarSquares = []
     let isHorizontal = true
     const width = 10
+    let isGameOver = false
+    let currentPlayer = 'assassin'
     
 
     //creates the Fort's squares
@@ -187,5 +189,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function dragEnd() {
         console.log('dragend')
+    }
+
+    //The gameplay logic
+
+    function gamePlay() {
+        if (isGameOver) return
+        if (currentPlayer === 'assassin') {
+            turnDisplay.innerHTML = 'Assassins Go'
+            templarSquares.forEach(square => square.addEventListener('click', function(e) {
+                revealGrid(square)
+            }))
+        }
+        if (currentPlayer === 'templar') {
+            turnDisplay.innerHTML = 'Templars Go'
+            setTimeout (templarGo, 1000)
+        }
+    }
+
+    attackButton.addEventListener('click', gamePlay)
+
+    let lookoutpostCount = 0
+    let footsoldiersCount = 0
+    let suppliesCount = 0
+    let knightsCount = 0
+    let templarsCount = 0
+
+    function revealGrid(square) {
+        if (!square.classList.contains('boom')) {
+        if (square.classList.contains('lookoutpost')) lookoutpostCount++
+        if (square.classList.contains('footsoldiers')) footsoldiersCount++
+        if (square.classList.contains('supplies')) suppliesCount++
+        if (square.classList.contains('knights')) knightsCount++
+        if (square.classList.contains('templars')) templarsCount++
+        }
+        if (square.classList.contains('lost')) {
+            square.classList.add('hit')
+        } else {
+            square.classList.add('missed')
+        }
+        currentPlayer = 'templar'
+        gamePlay()
+    }
+
+    //Gameplay logic for the templar's (computer's) turn
+    let templarLookoutpostCount = 0
+    let templarFootsoldiersCount = 0
+    let templarSuppliesCount = 0
+    let templarKnightsCount = 0
+    let templarTemplarsCount = 0
+
+    function templarGo() {
+        let random = Math.floor(Math.random() * assassinsSquares.length)
+        if (!assassinsSquares[random].classList.contains('hit')) {
+            assassinsSquares[random].classList.add('hit')
+            if (assassinsSquares[random].classList.contains('lookoutpost')) templarLookoutpostCount++
+            if (assassinsSquares[random].classList.contains('footsoldiers')) templarFootsoldiersCount++
+            if (assassinsSquares[random].classList.contains('supplies')) templarSuppliesCount++
+            if (assassinsSquares[random].classList.contains('knights')) templarKnightsCount++
+            if (assassinsSquares[random].classList.contains('templars')) templarTemplarsCount++
+        } else templarGo()
+            currentPlayer = 'assassin'
+            turnDisplay.innerHTML = 'Assassin Go'
     }
 })

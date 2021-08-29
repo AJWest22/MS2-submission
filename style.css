@@ -141,3 +141,11 @@
 .templars {
     background-color: red;
 }
+
+.hit {
+    background-color: orange;
+}
+
+.missed {
+    background-color: grey;
+}
