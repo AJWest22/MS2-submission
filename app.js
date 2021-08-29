@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const templarSquares = []
     let isHorizontal = true
     const width = 10
+    
 
     //creates the Fort's squares
     function createBoard(grid, squares) {
@@ -116,5 +117,75 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     rotateButton.addEventListener('click', rotate)
 
-    
+    //makes the players (assassin's) armies draggable
+    armies.forEach(army => army.addEventListener('dragstart', dragStart))
+    assassinsSquares.forEach(square => square.addEventListener('dragstart', dragStart))
+    assassinsSquares.forEach(square => square.addEventListener('dragover', dragOver))
+    assassinsSquares.forEach(square => square.addEventListener('dragenter', dragEnter))
+    assassinsSquares.forEach(square => square.addEventListener('dragleave', dragLeave))
+    assassinsSquares.forEach(square => square.addEventListener('drop', dragDrop))
+    assassinsSquares.forEach(square => square.addEventListener('dragend', dragEnd))
+
+    let selectedArmyNameWithIndex
+    let draggedArmy
+    let draggedArmyLength
+  
+    armies.forEach(army => army.addEventListener('mousedown', (e) => {
+      selectedArmyNameWithIndex = e.target.id
+      console.log(selectedArmyNameWithIndex)
+    }))
+  
+    function dragStart() {
+      draggedArmy = this
+      draggedArmyLength = this.childNodes.length
+      console.log(draggedArmy)
+    }
+  
+    function dragOver(e) {
+      e.preventDefault()
+    }
+  
+    function dragEnter(e) {
+      e.preventDefault()
+    }
+  
+    function dragLeave() {
+      console.log('drag leave')
+    }
+  
+    function dragDrop() {
+      let armyNameWithLastId = draggedArmy.lastChild.id
+      let armyClass = armyNameWithLastId.slice(0, -2)
+      console.log(armyClass)
+      let lastArmyIndex = parseInt(armyNameWithLastId.substr(-1))
+      let armyLastId = lastArmyIndex + parseInt(this.dataset.id)
+      console.log(armyLastId)
+      const notAllowedHorizontal = [0,10,20,30,40,50,60,70,80,90,1,11,21,31,41,51,61,71,81,91,2,22,32,42,52,62,72,82,92,3,13,23,33,43,53,63,73,83,93]
+      const notAllowedVertical = [99,98,97,96,95,94,93,92,91,90,89,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,73,72,71,70,69,68,67,66,65,64,63,62,61,60]
+      
+      let newNotAllowedHorizontal = notAllowedHorizontal.splice(0, 10 * lastArmyIndex)
+      let newNotAllowedVertical = notAllowedVertical.splice(0, 10 * lastArmyIndex)
+  
+      selectedArmyIndex = parseInt(selectedArmyNameWithIndex.substr(-1))
+  
+      armyLastId = armyLastId - selectedArmyIndex
+      console.log(armyLastId)
+  
+      if (isHorizontal && !newNotAllowedHorizontal.includes(armyLastId)) {
+        for (let i=0; i < draggedArmyLength; i++) {
+          assassinsSquares[parseInt(this.dataset.id) - selectedArmyIndex + i].classList.add('lost', armyClass)
+        }
+
+      } else if (!isHorizontal && !newNotAllowedVertical.includes(armyLastId)) {
+            for (let i=0; i < draggedArmyLength; i++) {
+            assassinsSquares[parseInt(this.dataset.id) - selectedArmyIndex + width*i].classList.add('lost', armyClass)
+        }
+      } else return
+  
+      gridDisplay.removeChild(draggedArmy)
+    }
+
+    function dragEnd() {
+        console.log('dragend')
+    }
 })
