@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     height: 60vh;
 }
 
@@ -23,6 +23,8 @@ h1 {
 .hidden-info {
     align-items: center;
     flex-direction: column;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px black;
 }
 
 .button {
@@ -95,7 +97,7 @@ h1 {
 }
 
 .hit::after {
-    background-color: hsl(30, 100%, 50%);
+    background-color:#FF7700;
 }
 
 .lookoutpost-container {
@@ -169,7 +171,7 @@ h1 {
 .templars-container {
     width: 200px;
     height: 40px;
-    background-color: red;
+    background-color: #f70d1a;
     margin: 20px;
     display: flex;
 }
@@ -177,7 +179,7 @@ h1 {
 .templars-vertical-container {
     width: 40px;
     height: 200px;
-    background-color: red;
+    background-color: #f70d1a;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
