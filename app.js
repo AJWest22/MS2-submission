@@ -243,7 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function templarGo() {
         let random = Math.floor(Math.random() * assassinsSquares.length)
         if (!assassinsSquares[random].classList.contains('hit')) {
-            assassinsSquares[random].classList.add('hit')
+            const hit = assassinsSquares[random].classList.contains('lost')
+            assassinsSquares[random].classList.add(hit ? 'hit' : 'missed')
             if (assassinsSquares[random].classList.contains('lookoutpost')) templarLookoutpostCount++
             if (assassinsSquares[random].classList.contains('footsoldiers')) templarFootsoldiersCount++
             if (assassinsSquares[random].classList.contains('supplies')) templarSuppliesCount++
