@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
 body {
     background-color: #001935;
-    font-family: Anton;
     color: white;
     overflow-x: hidden;
 }
@@ -13,11 +13,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 50vh;
 }
 
 h1 {
+    font-family: Anton;
     font-size: 6rem;
+}
+
+.instructions-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    height: 1vh;
+}
+
+p {
+    font-family: Libre-Baskerville;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .hidden-info {
