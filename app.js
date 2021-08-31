@@ -1,3 +1,6 @@
+//source code from code with Ania Kubow battleships game on youtube, links in the README!
+
+//code from Ania Kubow's youtube game battleships!
 document.addEventListener('DOMContentLoaded', () => {
     const assassinsGrid = document.querySelector('.grid-assassin')
     const templarsGrid = document.querySelector('.grid-templar')
@@ -20,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPlayer = 'assassin'
     
 
-    //creates the Fort's squares
+    //creates the Fort's squares, code from Ania Kubow's battleships game
     function createBoard(grid, squares) {
         for (let i = 0; i < width*width; i++) {
           const square = document.createElement('div')
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createBoard(assassinsGrid, assassinsSquares)
     createBoard(templarsGrid, templarSquares)
 
-    // army squads generate randomly
+    // army squads generate randomly, code from Ania Kubow's battleships game on youtube
     const armyArray = [
         {
             name: 'lookoutpost',
@@ -71,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ]
 
-    //Randomly places the templars army
+    //Randomly places the templars army, code from Ania Kubow's battleships game on youtube
     function generate(army) {
         let randomPosition = Math.floor(Math.random() * army.directions.length)
         let current = army.directions[randomPosition]
@@ -93,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generate(armyArray[3])
     generate(armyArray[4])
 
-    //makes the players (assassin's) armies rotate
+    //makes the players (assassin's) armies rotate, code from Ania Kubow's battleships game on youtube
 
     function rotate() {
         if (isHorizontal) {
@@ -119,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     rotateButton.addEventListener('click', rotate)
 
-    //makes the players (assassin's) armies draggable
+    //makes the players (assassin's) armies draggable, code from Ania Kubow's battleships game on youtube
     armies.forEach(army => army.addEventListener('dragstart', dragStart))
     assassinsSquares.forEach(square => square.addEventListener('dragstart', dragStart))
     assassinsSquares.forEach(square => square.addEventListener('dragover', dragOver))
@@ -191,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('dragend')
     }
 
-    //The gameplay logic
+    //The gameplay logic, code from Ania Kubow's battleships game on youtube
 
     function gamePlay() {
         if (isGameOver) return
@@ -209,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     attackButton.addEventListener('click', gamePlay)
 
+    //reveals whether  ahit has been successful or not, and code from Ania Kubow's battleships game on youtube
     let lookoutpostCount = 0
     let footsoldiersCount = 0
     let suppliesCount = 0
@@ -233,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gamePlay()
     }
 
-    //Gameplay logic for the templar's (computer's) turn
+    //Gameplay logic for the templar's (computer's) turn, and code from Ania Kubow's battleships game on youtube
     let templarLookoutpostCount = 0
     let templarFootsoldiersCount = 0
     let templarSuppliesCount = 0
@@ -256,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
             turnDisplay.innerHTML = 'Assassin Go'
     }
 
-    //checks for the winner
+    //checks for the winner, and code from Ania Kubow's battleships game on youtube
     function checkWins() {
         if (lookoutpostCount === 2) {
             infoDisplay.innerHTML = 'You destroyed the Templars lookoutpost!'
@@ -307,6 +311,8 @@ document.addEventListener('DOMContentLoaded', () => {
             gameOver()
         }
     }
+
+    //ends the game and code from Ania Kubow's battleships game on youtube
     function gameOver() {
         isGameOver = true
         attackButton.removeEventListener('click', gamePlay)
