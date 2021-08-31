@@ -39,8 +39,56 @@ The if statement on line 86, is used to check if the condions are true, so if it
 
 The rotate function is used to rotate the player's ships around. The classList.toggle feature is used to toggle between the different class names, depending if its horizontal or not. It has to be in twice otherwise the console will always log isHorizontal as false, which is not ideal, as sometimes isHorizontal will be true, and can result in bugs. 
 
-The players armies are draggable and placeable on the board. This is done using the dragStart function. The armies const collects all the armies together, combined with the event listener to make the armies ready and prepped for dragging. By taking the army class from the generate army function and the square class from the createBoard function, the armies are able to be selected and placed onto the individual squares. Each army has an eventlistener tied to the 'mousedown' functionality so that when the army is clicked on, it activates and can be ready to be dragged to the grid. Most functions use the preventdefault function to tell the computer not to run that function. However the dragDrop function is used to let the cmputer know where the player has dragged and dropped their armies, and ensure it can't be placed outside the grid. 
+The players armies are draggable and placeable on the board. This is done using the dragStart function. The armies const collects all the armies together, combined with the event listener to make the armies ready and prepped for dragging. By taking the army class from the generate army function and the square class from the createBoard function, the armies are able to be selected and placed onto the individual squares. Each army has an eventlistener tied to the 'mousedown' functionality so that when the army is clicked on, it activates and can be ready to be dragged to the grid. Most functions use the preventdefault function to tell the computer not to run that function. However the dragDrop function is used to let the computer know where the player has dragged and dropped their armies, and ensure it can't be placed outside the grid. 
 
-The variable armyNameWithLastId 
+DraggedArmy variable is used to contain all the sqauds/armies and their divs. lastChild.id is used to get the last id of that army's div. Slice is used to rmeove the last part of the army id so you end up with just the name of the army. This means that instead of logging 'templars-1' or 'templars -5', it should log 'templars'. 
+
+childNodes is used to go into the dragged army and look at all of its nodes, and however many nodes it has assign them to the draggedArmy.length. To get the future square where the last element in the dragged army is going to be in, dataset.id is used, to get the id of that square. To get just the id, the lastArmyIndex variable is used to equal the armyNamewithLastId variable, and substr(-1) to take off whatever the last item in the string is. This is the lastArmyIndex, and is going to be a string, because its going to be added to the index of the grid (0-99) it needs to be a number rather than a string, so ParseInt is used to get the number for lastArmyIndex. 
+
+So now lastArmyIndex has been defined (ie if its knights its going to be 3, or templars is going to be 4) it needs to be added to the dataset id in the grid, so you know exactly where and what location the last element of the army is going to be in. In order to add it to the dataset id of the grid, armyLastId is used to add lastArmyIndex to the dataset.id, parseInt is used again to ensure it is a number and not a string. 
+
+To know you have selected an army/squad, you have the selectedArmyIndex which is the army/squad you pick. In order to get the selectedArmyIndex the selectedArmyNameWithIndex.substr(-1) is used to get the last item of the string and throw it back to the user again. ParseInt is used again to make it a number. 
+
+To get the length of the army, so for example using supplies, at index no.1, its then needed to know that the end of the army is only one square ahead, not two. This is needed to know if the army is at the left or the right hand side of the grid. To achieve this armyLastId  - selectedArmyIndex is used to get the last id and the selectedArmyIndex. So that wherever the last id is, is where the army is landing. 
+
+If the army is horizontal in shape, a for loop is used to loop over the entire army so however nodes it has to render it in the assassinsGrid. The class of the army is added in the armyClass variable, and assassinsSquares is accessed and dataset id is passed through, then the classList is added and the armyClass so no mater which army is chosen, the army length and the army name class is set, and can be used to drag and drop the army into the grid. -selectedArmyIndex is used to if a user picks an army up towards the middle or far end of the army, it will still render and be drag and droppable. 
+
+If the army is vertical, another for loop is used but so that it doesn't go by 1, each time, otherwise it would end up going 1,2,3, instead width is needed each time. As width is set to 10, 10 is added again and again and again, so its rendering square 9, square 19, onwards up to 99. 
 
 The remove child function at the bottom ensures the army that has been dragged is removed fromthe grid display area and has been placed on the board.
+
+To stop the army from running to far to the left or right, and appearing on the opposite side, so for example the knights is placed to close to the edge, 1 square shows on the left, and 3 appear on the right side, some squares aren't available to place your armies in. So selectedArmyIndex is not allowed to be in the squares at the edge, otherwise it will spill over, and render play unplayable. The variables const notAllowedHorizontal and Let newNotAllowedHorizontal = notAllowedHorizontal.splice(0, 10 * lastarmyIndex)  and notAllowedvetical and nowNotAllowedVertical dictate what squares an army can't be placed in. 
+
+For the gamePlay itself, a gamePlay function is made. Currently isGameOver is set to false, so the game plays, when this is false, the player takes their turn. Each square has a click event listener on it, so when the player clicks a square, it turns over and reveals either a hit or a miss, using the revealGrid function. If it is the computer's go, the computer as 1 second, set using the timeout, to take a shot. and it will display templarsGo in the info heading under the buttons. 
+
+ The revealGrid function used to show if a hit has been successful or not. If the square that has been hit contains a: lookoutpost, footsoldiers, supplies, knights or templars, 1 shot is added to the count. If the square contains a an army, the classList of 'lost' is changed to 'hit' if none of the above are true, then the class is changed to 'missed'. A checkWins function is then called and run to check for any wins that might have occured during the turn, the current player is changed to 'templar' and the gamePlay function is called to keep the game in play if the check for wins function hasn't found anything.
+ 
+ for the templar's go function, the class names were changed slightly to make it so that they were representative of the Templar army. The function runs similarly to the revealGrid function, with some alterations. The random variable, is used to take a shot at the assassinsGrid by assigning a random grid number for it to hit. The if statement is used to determine along with the const hit variable, to determine if a hit has been successsful or not. If it is a hit, the class hit is added, if its not a hit, the class missed is added. If the hit has been successfull the army that has been hit, is added by one. So if the knights have been hit two times, they have been added two times, to make 2 successfull hits. After the computer has taken its turn, the checkWins function is called again, if it doesn't find anything, then the player switches to assassin.
+ 
+ The function checkwins is used to check if any notable events have taken place. So for example, has the supplies been hit? If its equal to 3 (has been hit 3 times) then the text will display 'you destroyed the templar's supplies', and the player wins 30 points. There are a total of 150 points up for grabs, the first to 150 points wins, and the system should display the winner.
+ 
+ Once the winner has been declared, the function gameOver is called, and it removes the attack button from the screen, and calls for the gamePlay function for the game to start again.
+ 
+ HTML and CSS:
+ 
+ Flexbox was used to style and align the items. And some basic fonts and colors were added to make the game more aestheticaly pleasing.
+ 
+ BUGS:
+ 
+ There are several knonw bugs. The first is that sometimes a square may not reveal when clikced on and the computer takes its turn. I'm not sure why this is, i have checked the code and the source code for tis game, and cannot find anything untoward with the clickeventlisteners. This bug is one I have encountered, but no one else who has played this game has. I am recording it here, should anyone else get it. 
+ 
+ The second bug is that sometimes the text doesn't display the winner, so the game doesn't end until all squares are hit, and it still won't declare the winner. Personally I haven't had this bug, but some people who have played this game tell me they have had it. I added the checkWins function to the templarsGo function, as it wasn't in there but was in the revealgrid function, this hopefully has fixed it, but I'm recording it here as well, in case it hasn't.
+ 
+ The 3rd bug is you can start the game without placing your armies. This is something I haven't had time to add, but is something I want to add in the future at a later date and when my skills have improved enough for me to work out a concrete solution to this problem. 
+ 
+ The 4th bug, is armies can be placed on top of each other, again i haven't had time to fix this, and its something I want to add when my skills have again improved and I can build and develop this project further. 
+ 
+ The 5th bug, is clicked to fast causes the computer to go into overwhelm, and it will take multiple shots at the assassin's grid. So if you click on the computer's grid 5x fast, the computer will get confused whose go it is, and will take more than 5 shots at the player. This is something Im not sure how to fix, and is again something I'd like to work on when my skills have reached a higher level.
+ 
+ CREDITS:
+ 
+ The source code for this game can be found here: https://www.youtube.com/watch?v=U64vIhh0TyM 
+ 
+ And the HTML and CSS here: https://www.youtube.com/watch?v=G6JTM-zt-dQ
+ 
+ All I did was tweak the variables and classes slightly. 
