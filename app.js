@@ -250,6 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (assassinsSquares[random].classList.contains('supplies')) templarSuppliesCount++
             if (assassinsSquares[random].classList.contains('knights')) templarKnightsCount++
             if (assassinsSquares[random].classList.contains('templars')) templarTemplarsCount++
+            checkWins()
         } else templarGo()
             currentPlayer = 'assassin'
             turnDisplay.innerHTML = 'Assassin Go'
