@@ -59,4 +59,36 @@ The remove child function at the bottom ensures the army that has been dragged i
 
 To stop the army from running to far to the left or right, and appearing on the opposite side, so for example the knights is placed to close to the edge, 1 square shows on the left, and 3 appear on the right side, some squares aren't available to place your armies in. So selectedArmyIndex is not allowed to be in the squares at the edge, otherwise it will spill over, and render play unplayable. The variables const notAllowedHorizontal and Let newNotAllowedHorizontal = notAllowedHorizontal.splice(0, 10 * lastarmyIndex)  and notAllowedvetical and nowNotAllowedVertical dictate what squares an army can't be placed in. 
 
+For the gamePlay itself, a gamePlay function is made. Currently isGameOver is set to false, so the game plays, when this is false, the player takes their turn. Each square has a click event listener on it, so when the player clicks a square, it turns over and reveals either a hit or a miss, using the revealGrid function. If it is the computer's go, the computer as 1 second, set using the timeout, to take a shot. and it will display templarsGo in the info heading under the buttons. 
+
+ The revealGrid function used to show if a hit has been successful or not. If the square that has been hit contains a: lookoutpost, footsoldiers, supplies, knights or templars, 1 shot is added to the count. If the square contains a an army, the classList of 'lost' is changed to 'hit' if none of the above are true, then the class is changed to 'missed'. A checkWins function is then called and run to check for any wins that might have occured during the turn, the current player is changed to 'templar' and the gamePlay function is called to keep the game in play if the check for wins function hasn't found anything.
  
+ for the templar's go function, the class names were changed slightly to make it so that they were representative of the Templar army. The function runs similarly to the revealGrid function, with some alterations. The random variable, is used to take a shot at the assassinsGrid by assigning a random grid number for it to hit. The if statement is used to determine along with the const hit variable, to determine if a hit has been successsful or not. If it is a hit, the class hit is added, if its not a hit, the class missed is added. If the hit has been successfull the army that has been hit, is added by one. So if the knights have been hit two times, they have been added two times, to make 2 successfull hits. After the computer has taken its turn, the checkWins function is called again, if it doesn't find anything, then the player switches to assassin.
+ 
+ The function checkwins is used to check if any notable events have taken place. So for example, has the supplies been hit? If its equal to 3 (has been hit 3 times) then the text will display 'you destroyed the templar's supplies', and the player wins 30 points. There are a total of 150 points up for grabs, the first to 150 points wins, and the system should display the winner.
+ 
+ Once the winner has been declared, the function gameOver is called, and it removes the attack button from the screen, and calls for the gamePlay function for the game to start again.
+ 
+ HTML and CSS:
+ 
+ Flexbox was used to style and align the items. And some basic fonts and colors were added to make the game more aestheticaly pleasing.
+ 
+ BUGS:
+ 
+ There are several knonw bugs. The first is that sometimes a square may not reveal when clikced on and the computer takes its turn. I'm not sure why this is, i have checked the code and the source code for tis game, and cannot find anything untoward with the clickeventlisteners. This bug is one I have encountered, but no one else who has played this game has. I am recording it here, should anyone else get it. 
+ 
+ The second bug is that sometimes the text doesn't display the winner, so the game doesn't end until all squares are hit, and it still won't declare the winner. Personally I haven't had this bug, but some people who have played this game tell me they have had it. I added the checkWins function to the templarsGo function, as it wasn't in there but was in the revealgrid function, this hopefully has fixed it, but I'm recording it here as well, in case it hasn't.
+ 
+ The 3rd bug is you can start the game without placing your armies. This is something I haven't had time to add, but is something I want to add in the future at a later date and when my skills have improved enough for me to work out a concrete solution to this problem. 
+ 
+ The 4th bug, is armies can be placed on top of each other, again i haven't had time to fix this, and its something I want to add when my skills have again improved and I can build and develop this project further. 
+ 
+ The 5th bug, is clicked to fast causes the computer to go into overwhelm, and it will take multiple shots at the assassin's grid. So if you click on the computer's grid 5x fast, the computer will get confused whose go it is, and will take more than 5 shots at the player. This is something Im not sure how to fix, and is again something I'd like to work on when my skills have reached a higher level.
+ 
+ CREDITS:
+ 
+ The source code for this game can be found here: https://www.youtube.com/watch?v=U64vIhh0TyM 
+ 
+ And the HTML and CSS here: https://www.youtube.com/watch?v=G6JTM-zt-dQ
+ 
+ All I did was tweak the variables and classes slightly. 
