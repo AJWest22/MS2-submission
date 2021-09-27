@@ -85,7 +85,7 @@ For the gamePlay itself, a gamePlay function is made. Currently isGameOver is se
  
  The 5th bug, is clicked to fast causes the computer to go into overwhelm, and it will take multiple shots at the assassin's grid. So if you click on the computer's grid 5x fast, the computer will get confused whose go it is, and will take more than 5 shots at the player. This is something Im not sure how to fix, and is again something I'd like to work on when my skills have reached a higher level.
  
- The 6th bug: If you click start game, and haven't placed your ships yet then the computer will take two shots instead  of one, I'm not sure why this is, but is something i am going to look at in the future development of this game to improve my skills.
+ The 6th bug: If you click start game, and haven't placed your armies yet then the computer will take two shots instead  of one, I'm not sure why this is, but it is something i am going to look at in the future development of this game to improve my skills.
 
  
  CREDITS:
