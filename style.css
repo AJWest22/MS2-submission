@@ -5,10 +5,14 @@
 body {
     background-color: #001935;
     color: white;
+    /* overflow code from web dev simplified on youtube*/
     overflow-x: hidden;
 }
 
 .title-container {
+
+    /* flexbox code from web dev simplified on youtube*/
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,6 +26,7 @@ h1 {
 }
 
 .instructions-container {
+    /* flexbox code from web dev simplified on youtube*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,6 +68,7 @@ p {
 }
 
 .container {
+    /* flexbox code from web dev simplified on youtube*/
     display: flex;
     justify-content: center;
     width: 100%;
@@ -94,6 +100,7 @@ p {
 
 .missed,
 .hit {
+    /* flexbox code from web dev simplified on youtube*/
     display: flex;
     justify-content: center;
     align-items: center;
