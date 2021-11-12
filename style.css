@@ -4,14 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 body {
     color: white;
-    /* overflow code from web dev simplified on youtube*/
     overflow-x: hidden;
 }
 
 .title-container {
-
-    /* flexbox code from web dev simplified on youtube*/
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +23,6 @@ h1 {
 }
 
 .instructions-container {
-    /* flexbox code from web dev simplified on youtube*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,26 +55,37 @@ p {
 }
 
 .button {
-    background-color: #008000;
-    font-family: Roboto;
-    font-size: 1.5rem;
+    background-color: #b8860b;
+    font-family: Montserrat;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 1px 1px black;
     margin-left: 2rem;
     cursor: pointer;
     border-radius: .2em;
 }
 
 .button:hover {
-    background-color: #001935;
-    color: #7CFC00;
+    background-color: #ffd700;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 .player-info {
+    font-family: Karma;
+    color: black;
     font-size: 1.5rem;
     margin: 1.5rem;
+    text-shadow: 0px 0px white;
+}
+
+#info {
+    font-family: Karma;
+    color: black;
+    text-shadow: 0px 0px white;
 }
 
 .container {
-    /* flexbox code from web dev simplified on youtube*/
     display: flex;
     justify-content: center;
     width: 100%;
@@ -112,7 +118,6 @@ p {
 
 .missed,
 .hit {
-    /* flexbox code from web dev simplified on youtube*/
     display: flex;
     justify-content: center;
     align-items: center;
