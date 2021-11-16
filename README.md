@@ -124,29 +124,31 @@ For the gamePlay itself, a gamePlay function is made. Currently isGameOver is se
 
  ### **HTML and CSS**
  
-Flexbox was used to style and align the grids, and the items in the hidden-info container, the buttons and  whose go and win message. 
+- Flexbox was used to style and align the grids, and the items in the hidden-info container, the buttons and  whose go and win message. 
 
-Spacing has been added to make the items more spaced out, which helps create a modern look and feel to the site. The spacing has been set to em, to make the site responsive. Example would be the grids, which have been set to 'margin-top: 8em', which give the grids some space between them and the instructions container.
+- Spacing has been added to make the items more spaced out, which helps create a modern look and feel to the site. The spacing has been set to em, to make the site responsive. Example would be the grids, which have been set to 'margin-top: 8em', which give the grids some space between them and the instructions container.
+
+- Divs have been used to keep the site's contents in their own containers, which helps keep everything aligned and spaced evenly. It also makes it more legible and easy to read and see which parts of the site are contained where.
 
 
+## **Design**
 
- 
  ## **BUGS**
  
- There are several knonw bugs. The first is that sometimes a square may not reveal when clikced on and the computer takes its turn. I'm not sure why this is, i have checked the code and the source code for tis game, and cannot find anything untoward with the clickeventlisteners. This bug is one I have encountered, but no one else who has played this game has. I am recording it here, should anyone else get it. 
+ - There are several knonw bugs. The first is that sometimes a square may not reveal when clikced on and the computer takes its turn. I'm not sure why this is, i have checked the code and the source code for tis game, and cannot find anything untoward with the clickeventlisteners. This bug is one I have encountered, but no one else who has played this game has. I am recording it here, should anyone else get it. 
  
- The second bug is that sometimes the text doesn't display the winner, so the game doesn't end until all squares are hit, and it still won't declare the winner. Personally I haven't had this bug, but some people who have played this game tell me they have had it. I added the checkWins function to the templarsGo function, as it wasn't in there but was in the revealgrid function, this hopefully has fixed it, but I'm recording it here as well, in case it hasn't.
+ - The second bug is that sometimes the text doesn't display the winner, so the game doesn't end until all squares are hit, and it still won't declare the winner. Personally I haven't had this bug, but some people who have played this game tell me they have had it. I added the checkWins function to the templarsGo function, as it wasn't in there but was in the revealgrid function, this hopefully has fixed it, but I'm recording it here as well, in case it hasn't.
  
- The 3rd bug is you can start the game without placing your armies. This is something I haven't had time to add, but is something I want to add in the future at a later date and when my skills have improved enough for me to work out a concrete solution to this problem. 
+ - The 3rd bug is you can start the game without placing your armies. This is something I haven't had time to add, but is something I want to add in the future at a later date and when my skills have improved enough for me to work out a concrete solution to this problem. 
  
- The 4th bug, is armies can be placed on top of each other, again i haven't had time to fix this, and its something I want to add when my skills have again improved and I can build and develop this project further. 
+ - The 4th bug, is armies can be placed on top of each other, again i haven't had time to fix this, and its something I want to add when my skills have again improved and I can build and develop this project further. 
  
- The 5th bug, is clicked to fast causes the computer to go into overwhelm, and it will take multiple shots at the assassin's grid. So if you click on the computer's grid 5x fast, the computer will get confused whose go it is, and will take more than 5 shots at the player. This is something Im not sure how to fix, and is again something I'd like to work on when my skills have reached a higher level.
+ - The 5th bug, is clicked to fast causes the computer to go into overwhelm, and it will take multiple shots at the assassin's grid. So if you click on the computer's grid 5x fast, the computer will get confused whose go it is, and will take more than 5 shots at the player. This is something Im not sure how to fix, and is again something I'd like to work on when my skills have reached a higher level.
  
- The 6th bug: If you click start game, and haven't placed your armies yet then the computer will take two shots instead  of one, I'm not sure why this is, but it is something i am going to look at in the future development of this game to improve my skills.
+ - The 6th bug: If you click start game, and haven't placed your armies yet then the computer will take two shots instead  of one, I'm not sure why this is, but it is something i am going to look at in the future development of this game to improve my skills.
 
  
- CREDITS:
+ ## **Credits**
  
  The source code for this game can be found here: https://www.youtube.com/watch?v=U64vIhh0TyM 
  
