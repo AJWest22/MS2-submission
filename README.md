@@ -152,6 +152,12 @@ The colours of the site are mainly gold, which is in keeping with capturing the 
 
 - The grids are currently a green colour, this was the original colour and was updated to Gold at one point, but when this was rolled out across the site, the computer's (templar's) armies could be seen for some reason, so it had to stick as green: #00cf35. At some point I would like to fix this and ammend the colour style, as at the minute it jarrs and dissrupts the flow of the site.
 
+- The army squads are set to a various colour depending on their size, so player's have a way of distinguishing them. At some point I would like to add a label so when player's hover over them an id flashes up showing which army squad is which. 
+
+### Images
+
+- There is currently only one image on the site the header image. The header image depeicts one of the treasures of the Assassin's Creed Games, it was found on Pixabay [link](https://pixabay.com/photos/eden-edenapfel-edensplitter-1200379/)
+I chose this image because it helps capture the atmosphere of the Assassin's Creed games. 
 
  ## **BUGS**
  
