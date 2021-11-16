@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPlayer = 'assassin'
     
 
-    //creates the Fort's squares
+    //creates the Fort's squares code from Ania Kubow battleships game
     function createBoard(grid, squares) {
         for (let i = 0; i < width*width; i++) {
           const square = document.createElement('div')
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createBoard(assassinsGrid, assassinsSquares)
     createBoard(templarsGrid, templarSquares)
 
-    // army squads generate randomly
+    // army squads generate randomly code from Ania Kubow battleships game
     const armyArray = [
         {
             name: 'lookoutpost',
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ]
 
-    //Randomly places the templars army
+    //Randomly places the templars army code from Ania Kubow battleships game
     function generate(army) {
         let randomPosition = Math.floor(Math.random() * army.directions.length)
         let current = army.directions[randomPosition]
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generate(armyArray[3])
     generate(armyArray[4])
 
-    //makes the players (assassin's) armies rotate
+    //makes the players (assassin's) armies rotate code from Ania Kubow battleships game
 
     function rotate() {
         if (isHorizontal) {
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     rotateButton.addEventListener('click', rotate)
 
-    //makes the players (assassin's) armies draggable
+    //makes the players (assassin's) armies draggable code from Ania Kubow battleships game
 
     armies.forEach(army => army.addEventListener('dragstart', dragStart))
     assassinsSquares.forEach(square => square.addEventListener('dragstart', dragStart))
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('dragend')
     }
 
-    //The gameplay logic
+    //The gameplay logic code from Ania Kubow battleships game
 
     function gamePlay() {
         if (isGameOver) return
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     attackButton.addEventListener('click', gamePlay)
 
-    //reveals whether a hit has been successful or not
+    //reveals whether a hit has been successful or not code from Ania Kubow battleships game
     let lookoutpostCount = 0
     let footsoldiersCount = 0
     let suppliesCount = 0
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gamePlay()
     }
 
-    //Gameplay logic for the templar's (computer's) turn
+    //Gameplay logic for the templar's (computer's) turn code from Ania Kubow battleships game
     let templarLookoutpostCount = 0
     let templarFootsoldiersCount = 0
     let templarSuppliesCount = 0
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
             turnDisplay.innerHTML = 'Assassin Go'
     }
 
-    //checks for the winner
+    //checks for the winner code from Ania Kubow battleships game
     function checkWins() {
         if (lookoutpostCount === 2) {
             infoDisplay.innerHTML = 'You destroyed the Templars lookoutpost!'
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    //ends the game
+    //ends the game code from Ania Kubow battleships game
     function gameOver() {
         isGameOver = true
         attackButton.removeEventListener('click', gamePlay)

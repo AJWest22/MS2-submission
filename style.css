@@ -96,6 +96,7 @@ p {
     margin-top: 8em;
     display: grid;
     background-color: #00cf35;
+    /*<!--code from Awebdev simplified-->*/
     grid-template-rows: repeat(10, 4.6vmin);
     grid-template-columns: repeat(10, 4.6vmin);
 }

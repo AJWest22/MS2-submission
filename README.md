@@ -1,22 +1,64 @@
 # MS2-submission
 
-User perspective:
 
-  1: The user wants to play a decent and fun game
-  2: The user wants to see a aesetically appealling site with good gameplay
-  3: The user wants a game that is easy to understand and play
-  
-Site owner's perspective:
-  
-  1: The site owner wants a game that makes users come and play again
-  2: The site owner wants to make a game that is easy to play and understand
-  3: The site owner wants the game to have good graphics ad visualls, so it is aesetically pleasing
-  
-  
-WHY THE GAME WAS MADE:
+## Table of Content
+
+1. [Overview](#overview)
+
+2. [Site Goals](#site-goals)
+    1. [UX Goals](#ux-goals)
+    2. [Siteowners Goals](#siteowners-goals)
+    3. [User Stories](#user-stories)
+    4. [Siteowner Stories](#siteowner-stories)
+
+3. [About The Site](#about-the-site)
+    1. [Target Audience](#target-audience)
+
+4. [Code Used](#code-used)
+    1. [Files Made](#files-made)
+
+5. [Design](#design)
+    1. [Typography](#typography)
+    2. [Colors](#colors)
+    3. [Images](#images)
+
+6. [Code Features](#code-features)
+
+7. [Features to be Added](#features-to-be-added)
+
+8. [Testing](#testing)
+    1. [HTML Validation](#html-validation)
+    2. [CSS Validation](#css-validation)
+    4. [Browser Compatibility](#browser-compatibility)
+    5. [Devices Tested On](#devices-tested-on)
+
+9. [Credits](#credits)
+     1. [Sources](#sources)
+     2. [Imagery](#imagery)
+
+10. [Acknowledgements](#acknowledgements)
+
+## **Overview**
  
 The game is inspired by the popular video game series Assassin's Creed, and Battleships. Assassin's Creed is about the age old war between the Assassin's and their enemies the Templars. In the video game Assassin's Creed Rogue, the player can capture forts, and loot treasure/supplies from them. This provided inspiraton for the idea of capturing forts in a Battleships inspired format: You take a shot at hitting the computer's (templar's) fort and then the computer has a go at hitting your (assassin's) fort. (Unlike in the game where to capture the fort the player must sneak in and not be spotted while fullfilling quests)
- 
+
+## **Site Goals**
+
+### **UX Goals**
+
+- Users can play the game
+-  The user wants to play a decent and fun game
+-  The user wants to see a aesetically appealling site with good gameplay
+- The user wants a game that is easy to understand and play
+
+### **Siteowner's Goals**
+
+- Create a game users can enjoy
+- The site owner wants a game that makes users come and play again
+- The site owner wants to make a game that is easy to play and understand
+- The site owner wants the game to have good graphics ad visualls, so it is aesetically pleasing
+  
+  
 JAVASCRIPT GAME LOGIC:
 
 The JavaScript game logic was the hardest to make. As two forts are needed with grids on them. Each grid is 10 x 10, so has 100 squares in them. To create these squares a for loop was used to create the grid's individual squares, by passing in the parameters 'grid and squares' the code when run creates squares inside the width of the grid (i < width* width keeps it within the specified area{hence the width * width with the variable width set to 10 to make it equal 100}) To create each individual sqaure, 'createElement ('div) is used with each div being an individual square. The const square is equal to every square in the grids, and has an id of i, each time it loops and creates a sqaure, the sqaure has a number of 1 - 100, which comes from the i < width * width. The use of appendChild puts the sqaure into the assassinsGrid and templarsGrid where it can then be assigned a number 1 - 100. Push is used to push a sqaure into the sqaure variable.
