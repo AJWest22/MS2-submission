@@ -154,7 +154,7 @@ The colours of the site are mainly gold, which is in keeping with capturing the 
 
 ### Images
 
-- There is currently only one image on the site the header image. The header image depeicts one of the treasures of the Assassin's Creed Games, it was found on Pixabay, you can find it [here](https://pixabay.com/photos/eden-edenapfel-edensplitter-1200379/)
+- There is currently only one image on the site the header image. The header image depeicts one of the treasures of the Assassin's Creed Games, it was found on Pixabay, you can find it [here.](https://pixabay.com/photos/eden-edenapfel-edensplitter-1200379/)
 I chose this image because it helps capture the atmosphere of the Assassin's Creed games. 
 
 ## **Features to be Added**
