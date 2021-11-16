@@ -130,9 +130,21 @@ For the gamePlay itself, a gamePlay function is made. Currently isGameOver is se
 
 - Divs have been used to keep the site's contents in their own containers, which helps keep everything aligned and spaced evenly. It also makes it more legible and easy to read and see which parts of the site are contained where.
 
+- Classes and IDs have been used to target elements individually, this means they can be aligned and sltyled using CSS and Flexbox, to keep the site looking clean.
 
 ## **Design**
 
+### Typography
+
+There are 3 fonts used in this site: Anton, Montserrat, and Karma.
+
+- Anton is used in the H1 of the header image. It is used to help create a eye catching header image, and works well as a header font as it is quite thick in terms of depth, which akes the image stand out. The font is also in line with the feel of the game and the original games BattleShips and Assassin's Creed games.  The white text contrasts with the gold of the image, text-shadow was originally attempted to be added, but the text-shadow didn't show, even with the cache cleared, and site saved.
+
+- Montserrat is used in the H2 of the instructions container, it's purpose is to create a header that is in contrast with the Anton font in the header image, while still looking decent and in-keeping with the syle of the original game materials and the style of the site. Montserrat does this nicely, and gives off the effect of looking ike it could come from a treasure map, which is in keeping with the header image and Anton font. 
+
+- Karma font is used in the instructions container, it helps with creating the flow of the site and the feel of the site. Its smaller size is in contrast to both the headers, and this creates a modern text effect, that flows with the top 1/3 of the site. The font also has a kind of rugged look and feel to it, which gives off an old treasure type of feel, which is in-keeping with the header image. 
+
+### Colours
  ## **BUGS**
  
  - There are several knonw bugs. The first is that sometimes a square may not reveal when clikced on and the computer takes its turn. I'm not sure why this is, i have checked the code and the source code for tis game, and cannot find anything untoward with the clickeventlisteners. This bug is one I have encountered, but no one else who has played this game has. I am recording it here, should anyone else get it. 
