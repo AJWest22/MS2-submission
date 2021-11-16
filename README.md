@@ -8,16 +8,13 @@
 2. [Site Goals](#site-goals)
     1. [UX Goals](#ux-goals)
     2. [Siteowners Goals](#siteowners-goals)
-    3. [User Stories](#user-stories)
-    4. [Siteowner Stories](#siteowner-stories)
 
 3. [About The Site](#about-the-site)
     1. [Target Audience](#target-audience)
 
 4. [Code Used](#code-used)
     1. [JavaScript Logic](#javascript-logic)
-    2. [HTML](#html)
-    3. [CSS](#css)
+    2. [HTML and CSS](#html-and-css)
 
 5. [Design](#design)
     1. [Typography](#typography)
@@ -125,14 +122,16 @@ For the gamePlay itself, a gamePlay function is made. Currently isGameOver is se
  Once the winner has been declared, the function gameOver is called, and it removes the attack button from the screen, and calls for the gamePlay function for the game to start again.
  
 
- ### **HTML**
-HTML 
- ### **CSS**
- HTML and CSS:
+ ### **HTML and CSS**
  
- Flexbox was used to style and align the items. And some basic fonts and colors were added to make the game more aestheticaly pleasing.
+Flexbox was used to style and align the grids, and the items in the hidden-info container, the buttons and  whose go and win message. 
+
+Spacing has been added to make the items more spaced out, which helps create a modern look and feel to the site. The spacing has been set to em, to make the site responsive. Example would be the grids, which have been set to 'margin-top: 8em', which give the grids some space between them and the instructions container.
+
+
+
  
- BUGS:
+ ## **BUGS**
  
  There are several knonw bugs. The first is that sometimes a square may not reveal when clikced on and the computer takes its turn. I'm not sure why this is, i have checked the code and the source code for tis game, and cannot find anything untoward with the clickeventlisteners. This bug is one I have encountered, but no one else who has played this game has. I am recording it here, should anyone else get it. 
  
