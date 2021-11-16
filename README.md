@@ -15,7 +15,9 @@
     1. [Target Audience](#target-audience)
 
 4. [Code Used](#code-used)
-    1. [Files Made](#files-made)
+    1. [JavaScript Logic](#javascript-logic)
+    2. [HTML](#html)
+    3. [CSS](#css)
 
 5. [Design](#design)
     1. [Typography](#typography)
@@ -58,8 +60,19 @@ The game is inspired by the popular video game series Assassin's Creed, and Batt
 - The site owner wants to make a game that is easy to play and understand
 - The site owner wants the game to have good graphics ad visualls, so it is aesetically pleasing
   
-  
-JAVASCRIPT GAME LOGIC:
+## **About the Site**
+- The site has a total of 1 page currently.
+ - Users can play as the Assassin's.
+ - Object of the game is to hit the Templar's Armies.
+ - Users can rotate their armies
+
+### **Target Audience**
+ - The site is aimed and adults/young adults who are interested in either Assassin's Creed or BattleShips.
+ - The site is also aimed at people who enjoy games.
+
+## **Code Used**
+
+### **JavaScript Logic**
 
 The JavaScript game logic was the hardest to make. As two forts are needed with grids on them. Each grid is 10 x 10, so has 100 squares in them. To create these squares a for loop was used to create the grid's individual squares, by passing in the parameters 'grid and squares' the code when run creates squares inside the width of the grid (i < width* width keeps it within the specified area{hence the width * width with the variable width set to 10 to make it equal 100}) To create each individual sqaure, 'createElement ('div) is used with each div being an individual square. The const square is equal to every square in the grids, and has an id of i, each time it loops and creates a sqaure, the sqaure has a number of 1 - 100, which comes from the i < width * width. The use of appendChild puts the sqaure into the assassinsGrid and templarsGrid where it can then be assigned a number 1 - 100. Push is used to push a sqaure into the sqaure variable.
 
@@ -111,6 +124,10 @@ For the gamePlay itself, a gamePlay function is made. Currently isGameOver is se
  
  Once the winner has been declared, the function gameOver is called, and it removes the attack button from the screen, and calls for the gamePlay function for the game to start again.
  
+
+ ### **HTML**
+HTML 
+ ### **CSS**
  HTML and CSS:
  
  Flexbox was used to style and align the items. And some basic fonts and colors were added to make the game more aestheticaly pleasing.
