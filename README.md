@@ -21,21 +21,19 @@
     2. [Colors](#colors)
     3. [Images](#images)
 
-6. [Code Features](#code-features)
+6. [Features to be Added](#features-to-be-added)
 
-7. [Features to be Added](#features-to-be-added)
-
-8. [Testing](#testing)
+7. [Testing](#testing)
     1. [HTML Validation](#html-validation)
     2. [CSS Validation](#css-validation)
     4. [Browser Compatibility](#browser-compatibility)
     5. [Devices Tested On](#devices-tested-on)
 
-9. [Credits](#credits)
+8. [Credits](#credits)
      1. [Sources](#sources)
      2. [Imagery](#imagery)
 
-10. [Acknowledgements](#acknowledgements)
+9. [Acknowledgements](#acknowledgements)
 
 ## **Overview**
  
@@ -43,33 +41,33 @@ The game is inspired by the popular video game series Assassin's Creed, and Batt
 
 ## **Site Goals**
 
-### **UX Goals**
+### UX Goals
 
 - Users can play the game
 -  The user wants to play a decent and fun game
 -  The user wants to see a aesetically appealling site with good gameplay
 - The user wants a game that is easy to understand and play
 
-### **Siteowner's Goals**
+### Siteowner's Goals
 
 - Create a game users can enjoy
 - The site owner wants a game that makes users come and play again
 - The site owner wants to make a game that is easy to play and understand
 - The site owner wants the game to have good graphics ad visualls, so it is aesetically pleasing
   
-## **About the Site**
+## About the Site
 - The site has a total of 1 page currently.
  - Users can play as the Assassin's.
  - Object of the game is to hit the Templar's Armies.
  - Users can rotate their armies
 
-### **Target Audience**
+### Target Audience
  - The site is aimed and adults/young adults who are interested in either Assassin's Creed or BattleShips.
  - The site is also aimed at people who enjoy games.
 
 ## **Code Used**
 
-### **JavaScript Logic**
+### JavaScript Logic
 
 The JavaScript game logic was the hardest to make. As two forts are needed with grids on them. Each grid is 10 x 10, so has 100 squares in them. To create these squares a for loop was used to create the grid's individual squares, by passing in the parameters 'grid and squares' the code when run creates squares inside the width of the grid (i < width* width keeps it within the specified area{hence the width * width with the variable width set to 10 to make it equal 100}) To create each individual sqaure, 'createElement ('div) is used with each div being an individual square. The const square is equal to every square in the grids, and has an id of i, each time it loops and creates a sqaure, the sqaure has a number of 1 - 100, which comes from the i < width * width. The use of appendChild puts the sqaure into the assassinsGrid and templarsGrid where it can then be assigned a number 1 - 100. Push is used to push a sqaure into the sqaure variable.
 
@@ -122,7 +120,7 @@ For the gamePlay itself, a gamePlay function is made. Currently isGameOver is se
  Once the winner has been declared, the function gameOver is called, and it removes the attack button from the screen, and calls for the gamePlay function for the game to start again.
  
 
- ### **HTML and CSS**
+ ### HTML and CSS
  
 - Flexbox was used to style and align the grids, and the items in the hidden-info container, the buttons and  whose go and win message. 
 
@@ -156,8 +154,26 @@ The colours of the site are mainly gold, which is in keeping with capturing the 
 
 ### Images
 
-- There is currently only one image on the site the header image. The header image depeicts one of the treasures of the Assassin's Creed Games, it was found on Pixabay [link](https://pixabay.com/photos/eden-edenapfel-edensplitter-1200379/)
+- There is currently only one image on the site the header image. The header image depeicts one of the treasures of the Assassin's Creed Games, it was found on Pixabay, you can find it [here](https://pixabay.com/photos/eden-edenapfel-edensplitter-1200379/)
 I chose this image because it helps capture the atmosphere of the Assassin's Creed games. 
+
+## **Features to be Added**
+
+There are several features I would like to add to develop this game and make it more my own: a captain, ids for the army squads, a counter, levels of difficulty, improved computer AI, a timer, making the game unable to be played without the squads being placed first. 
+
+- Captain: I would like to add a single div called the captain, this would be just a one div, and if hit, it would end the game immediately. 
+
+- IDs for the squads: Currently the squads are hard to distinguish, so I would like to add a nametag to the squads divs, so this way the player can see what they picking up and dragging.
+
+- Counter: I'd like to add a counter for the player's ammo. So a player has only a limited number of shots per game, and if they run out the game ends and they fail. The same concept would apply to the templar's computer.
+
+- Timer: I'd also like to add a timer, so a player has a limited time frame to take a shot, if they don't shoot in the allotted time frame, the computer will shoot randomly for them. 
+
+- Levels of Difficuly: Currently its quite easy to win the game, so I would like to add various levels of difficulty with increased computer AI, and fewer arrows/ammo. 
+
+- Increased AI: The AI is very basic at the moment, I would like to research how to increase the AI of the computer, currently the squads are close together, so having the squads placed further apart would make them harder to hit, and improved accuracy of the computer's shots. 
+
+- Button Fixes: Currently a player can play the game without placing their squads. At some point I'd like to make the game so player's get a notification reminding them to place their armies before playing, and the game is unplayable until they are all placed.
 
  ## **BUGS**
  
