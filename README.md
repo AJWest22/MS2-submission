@@ -190,7 +190,17 @@ The HTML code was tested using W3C MarkUp Validation Service, there was one erro
 
 ### CSS Validation
 
+The CSS code was tested using W3C CSS Validation Service, and there were no errors found.
+
+<details><summary>HTML Validation</summary>
+  <img src="images/css-validation.png">
+  </details>
+
 ### JavaScript Validation
+
+<details><summary>HTML Validation</summary>
+  <img src="static/images/html-validation.png">
+  </details>
 
 ### Browser Compatibility
 
