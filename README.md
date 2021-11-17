@@ -26,6 +26,7 @@
 7. [Testing](#testing)
     1. [HTML Validation](#html-validation)
     2. [CSS Validation](#css-validation)
+    3. [JavaScript Validation](#javascript-validation)
     4. [Browser Compatibility](#browser-compatibility)
     5. [Devices Tested On](#devices-tested-on)
 
@@ -161,7 +162,7 @@ I chose this image because it helps capture the atmosphere of the Assassin's Cre
 
 There are several features I would like to add to develop this game and make it more my own: a captain, ids for the army squads, a counter, levels of difficulty, improved computer AI, a timer, making the game unable to be played without the squads being placed first. 
 
-- Captain: I would like to add a single div called the captain, this would be just a one div, and if hit, it would end the game immediately. 
+- Captain: I would like to add a single div called the captain, this would be made of just one div, and if hit, it would end the game immediately. 
 
 - IDs for the squads: Currently the squads are hard to distinguish, so I would like to add a nametag to the squads divs, so this way the player can see what they picking up and dragging.
 
@@ -174,6 +175,20 @@ There are several features I would like to add to develop this game and make it 
 - Increased AI: The AI is very basic at the moment, I would like to research how to increase the AI of the computer, currently the squads are close together, so having the squads placed further apart would make them harder to hit, and improved accuracy of the computer's shots. 
 
 - Button Fixes: Currently a player can play the game without placing their squads. At some point I'd like to make the game so player's get a notification reminding them to place their armies before playing, and the game is unplayable until they are all placed.
+
+## Testing
+
+All code has been tested in several validators, including: [W3C MarkUp Validation Service](https://validator.w3.org/), [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/), and [JS Hint](https://jshint.com/).
+
+### HTML Validation
+
+### CSS Validation
+
+### JaavaScript Validation
+
+### Browser Compatibility
+
+### Devices Tested On
 
  ## **BUGS**
  
@@ -189,7 +204,6 @@ There are several features I would like to add to develop this game and make it 
  
  - The 6th bug: If you click start game, and haven't placed your armies yet then the computer will take two shots instead  of one, I'm not sure why this is, but it is something i am going to look at in the future development of this game to improve my skills.
 
- 
  ## **Credits**
  
  The source code for this game can be found here: https://www.youtube.com/watch?v=U64vIhh0TyM 
