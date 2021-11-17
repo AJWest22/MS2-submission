@@ -178,7 +178,7 @@ There are several features I would like to add to develop this game and make it 
 
 ## Testing
 
-All code has been tested in several validators, including: [W3C MarkUp Validation Service](https://validator.w3.org/), [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/), and [JS Hint](https://jshint.com/).
+All code has been tested in several validators, including: [W3C MarkUp Validation Service](https://validator.w3.org/), [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/), and [Code Beautify](https://codebeautify.org/jsvalidate).
 
 ### HTML Validation
 
@@ -192,19 +192,28 @@ The HTML code was tested using W3C MarkUp Validation Service, there was one erro
 
 The CSS code was tested using W3C CSS Validation Service, and there were no errors found.
 
-<details><summary>HTML Validation</summary>
+<details><summary>CSS Validation</summary>
   <img src="images/css-validation.png">
-  </details>
+</details>
 
 ### JavaScript Validation
 
-<details><summary>HTML Validation</summary>
-  <img src="static/images/html-validation.png">
-  </details>
+The JavaScript code was tested using Code Beautify, the code was found to have a few errors as shown, I'm unsure how to fix them, and they weren't flagging up in the IDE.
+
+<details><summary>JavaScript Validation</summary>
+  <img src="images/js-validation.png">
+</details>
 
 ### Browser Compatibility
 
+This site has been tested on the following browsers:
+- FireFox
+- Safari
+- Microsoft Edge
+
 ### Devices Tested On
+
+This site has been tested on: laptop 15", iPad 8th gen, iPhone SE (2016) and iPhone SE (2020).
 
  ## **BUGS**
  
@@ -224,6 +233,4 @@ The CSS code was tested using W3C CSS Validation Service, and there were no erro
  
  The source code for this game can be found here: https://www.youtube.com/watch?v=U64vIhh0TyM 
  
- And the HTML and CSS here: https://www.youtube.com/watch?v=G6JTM-zt-dQ
- 
- All I did was tweak the variables and classes slightly. 
+ And the HTML and CSS here: https://www.youtube.com/watch?v=G6JTM-zt-dQ 
