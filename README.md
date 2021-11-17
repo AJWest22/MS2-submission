@@ -200,8 +200,8 @@ The CSS code was tested using W3C CSS Validation Service, and there were no erro
 
 The JavaScript code was tested using Code Beautify, the code was found to have a few errors as shown, I'm unsure how to fix them, and they weren't flagging up in the IDE.
 
-<details><summary>JavaScript Validation</summary>
-  <img src="images/js-validatior.png">
+<details><summary>JavaScript Validator</summary>
+  <img src="images/js-validator.png">
 </details>
 
 ### Browser Compatibility
