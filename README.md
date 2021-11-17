@@ -182,9 +182,15 @@ All code has been tested in several validators, including: [W3C MarkUp Validatio
 
 ### HTML Validation
 
+The HTML code was tested using W3C MarkUp Validation Service, there was one error, which was the h3 tag with the id of "info", this cannot be easily corrected though, as this header is used to display alternating messages, for example whose go it is, and the winner of the game. 
+
+<details><summary>HTML Validation</summary>
+  <img src="images/html-validation.png">
+</details>
+
 ### CSS Validation
 
-### JaavaScript Validation
+### JavaScript Validation
 
 ### Browser Compatibility
 
