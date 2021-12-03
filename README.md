@@ -57,6 +57,45 @@ The game is inspired by the popular video game series Assassin's Creed, and Batt
 - The site owner wants a game that makes users come and play again
 - The site owner wants to make a game that is easy to play and understand
 - The site owner wants the game to have good graphics ad visualls, so it is aesetically pleasing
+
+### User Stories
+
+ - As a user I want a game that is easy to understand
+ - As a user I want to know whether my shot was successfull or not
+ - As a user I want the ability to rotate my armies so I can place them successfully
+ - As a user I want the ability to layout my armies on my grid 
+ - As a user I want the game to be easily playable.
+
+Testing 1: As a user, I want a game that is easy to understand
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Start screen | Has instructions on how to play | User can read and understand the game| Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
+
+Testing 2: As a user I want to know whether my shot was successfull or not
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game screen |Click the square you want shoot at | The hit will turn either orange or white depending on whether its a hit or not | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
+
+Testing 3: As a user I want the ability to rotate my armies so I can place them successfully
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game screen | Click rotate squads button | The armies rotate depending on whether the button has been clicked or not | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
+
   
 ## About the Site
 - The site has a total of 1 page currently.
