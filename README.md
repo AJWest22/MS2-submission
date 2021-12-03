@@ -8,6 +8,8 @@
 2. [Site Goals](#site-goals)
     1. [UX Goals](#ux-goals)
     2. [Siteowners Goals](#siteowners-goals)
+    3. [User Stories](#user-stories)
+    4. [User Stories Testing](#user-stories-testing)
 
 3. [About The Site](#about-the-site)
     1. [Target Audience](#target-audience)
