@@ -68,6 +68,8 @@ The game is inspired by the popular video game series Assassin's Creed, and Batt
  - As a user I want the ability to layout my armies on my grid 
  - As a user I want the game to be easily playable.
 
+### User Stories Testing 
+
 Testing 1: As a user, I want a game that is easy to understand
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -85,7 +87,7 @@ Testing 2: As a user I want to know whether my shot was successfull or not
 | Game screen |Click the square you want shoot at | The hit will turn either orange or white depending on whether its a hit or not | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="images/shots.png">
 </details>
 
 Testing 3: As a user I want the ability to rotate my armies so I can place them successfully
@@ -95,7 +97,7 @@ Testing 3: As a user I want the ability to rotate my armies so I can place them 
 | Game screen | Click rotate squads button | The armies rotate depending on whether the button has been clicked or not | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="images/rotation.png">
 </details>
 
   
