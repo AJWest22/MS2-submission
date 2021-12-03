@@ -75,7 +75,7 @@ Testing 1: As a user, I want a game that is easy to understand
 | Start screen | Has instructions on how to play | User can read and understand the game| Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="images/instructions.png">
 </details>
 
 Testing 2: As a user I want to know whether my shot was successfull or not
