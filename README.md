@@ -90,7 +90,7 @@ Testing 2: As a user I want to know whether my shot was successfull or not
 <img src="images/shots.png">
 </details>
 
-Testing 3: As a user I want the ability to rotate my armies so I can place them successfully
+Testing 3: As a user I want the ability to rotate my armies so I have an alternative way of placing them
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -100,7 +100,27 @@ Testing 3: As a user I want the ability to rotate my armies so I can place them 
 <img src="images/rotation.png">
 </details>
 
-  
+Testing 4: As a user I want the ability to place my armies on my grid
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game screen | Click and drag an army to the grid | The armies can be placed on the squares, except the outer ones, this is to stop them wrapping around and appearing half on one side of the grid and half on the other | Works as expected 
+
+<details><summary>Screenshots</summary>
+<img src="images/armies.jpg">
+</details>
+
+Testing 5: As a user I want the game to be easily playable
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game screen | Read Insturctions | The instructions are easy to understand | Works as expected 
+
+<details><summary>Screenshots</summary>
+<img src="images/instructions.jpg">
+</details>
+
+
 ## About the Site
 - The site has a total of 1 page currently.
  - Users can play as the Assassin's.
