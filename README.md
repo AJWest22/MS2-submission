@@ -12,6 +12,7 @@
     4. [User Stories Testing](#user-stories-testing)
 
 3. [About The Site](#about-the-site)
+    1. [Development Lifecycle] (#development-lifecycle)
     1. [Target Audience](#target-audience)
 
 4. [Code Used](#code-used)
@@ -126,6 +127,10 @@ Testing 5: As a user I want the game to be easily playable
  - Users can play as the Assassin's.
  - Object of the game is to hit the Templar's Armies.
  - Users can rotate their armies
+
+### Development Lifecycle
+
+
 
 ### Target Audience
  - The site is aimed and adults/young adults who are interested in either Assassin's Creed or BattleShips.
