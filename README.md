@@ -12,8 +12,8 @@
     4. [User Stories Testing](#user-stories-testing)
 
 3. [About The Site](#about-the-site)
-    1. [Development Lifecycle] (#development-lifecycle)
-    1. [Target Audience](#target-audience)
+    1. [Development Lifecycle](#development-lifecycle)
+    2. [Target Audience](#target-audience)
 
 4. [Code Used](#code-used)
     1. [JavaScript Logic](#javascript-logic)
@@ -139,6 +139,10 @@ ONce the initial HTML and CSS base structure was in place, JavaScript variables 
 Once the variables were defined, the fort's were made using a function with a for loop that set the with, and then creating a div, and appending another div as a child to it, then pushing the square/div to create a grid that was 10x10. 
 
 After this an array was used to make the armies easily accessible and help generate the computer's army, it just needs to access the array, where the armies are displayed and their lengths/widths.
+
+Once this was made a function was written to randomly generate the computer's armies on the grid, there were several changes made to the variables during this stage to better clarify and simplify the project's development and variable names. In the CSS file, colours were given to each of the armies, so that they could be easily identified on the board, and so I could see if they were showing up or not.
+
+Once the armies were generating randomly, a function to enable player's to rotate their armies was created to make it so player's had more options when placing their armies. A new variable was also created to let the armies be rotated horizontally. 
 
 ### Target Audience
  - The site is aimed and adults/young adults who are interested in either Assassin's Creed or BattleShips.
