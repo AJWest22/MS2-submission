@@ -130,7 +130,15 @@ Testing 5: As a user I want the game to be easily playable
 
 ### Development Lifecycle
 
+This project was a steep learning curve, during which I felt I came to understand javaScript in much more detail than i did when I originally started. The project incorporates elements of JavaScript I previously didn't understand, and could in no way replicate in a real coding project (hence why I needed a JavaScripr project video to help). Examples of these would be for loops, if statements and arrow functions. However since building this project, my knowledge and understanding of JavaScript have grown ten-fold and I now feel competent enoough to attempt my own JavaScript projects. 
 
+The site was originally started in August 2021, with the initial base structure of how the game would be displayed on the front end of the site using HTML and CSS. This included adding the basic HTML 5 to set up the document, and containers needed for each army, buttons to start the game, to rotate a player's army. Some initial CSS was written to distinguis the armies, and to check they were displaying as they should be on their respective boards.
+
+ONce the initial HTML and CSS base structure was in place, JavaScript variables were added to target the individual game elements, including the buttons, individual armies, and the forts/game boards. This done by navigating the DOM, and getting each element by either its class or id names. 
+
+Once the variables were defined, the fort's were made using a function with a for loop that set the with, and then creating a div, and appending another div as a child to it, then pushing the square/div to create a grid that was 10x10. 
+
+After this an array was used to make the armies easily accessible and help generate the computer's army, it just needs to access the array, where the armies are displayed and their lengths/widths.
 
 ### Target Audience
  - The site is aimed and adults/young adults who are interested in either Assassin's Creed or BattleShips.
