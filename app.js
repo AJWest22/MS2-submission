@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const footSoldiers = document.querySelector('.footsoldiers-container');
     const supplies = document.querySelector('.supplies-container');
     const knights = document.querySelector('.knights-container');
-    const templars = document.querySelector('.templars-container');
+    const generals = document.querySelector('.generals-container');
     const attackButton = document.querySelector('#attack');
     const rotateButton = document. querySelector('#rotate');
     const turnDisplay = document.querySelector('#whose-turn');
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            name: 'templars',
+            name: 'generals',
             directions: [
                 [0, 1, 2, 3, 4],
                 [0, width, width*2, width*3, width*4]
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footSoldiers.classList.toggle('footsoldiers-vertical-container');
             supplies.classList.toggle('supplies-vertical-container');
             knights.classList.toggle('knights-vertical-container');
-            templars.classList.toggle('templars-vertical-container');
+            generals.classList.toggle('generals-vertical-container');
             isHorizontal = false;
             console.log(isHorizontal);
             return;
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footSoldiers.classList.toggle('footsoldiers-vertical-container');
             supplies.classList.toggle('supplies-vertical-container');
             knights.classList.toggle('knights-vertical-container');
-            templars.classList.toggle('templars-vertical-container');
+            generals.classList.toggle('generals-vertical-container');
             isHorizontal = true;
             console.log(isHorizontal);
             return;
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let footsoldiersCount = 0;
     let suppliesCount = 0;
     let knightsCount = 0;
-    let templarsCount = 0;
+    let generalsCount = 0;
 
     function revealGrid(square) {
         if (!square.classList.contains('boom')) {
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (square.classList.contains('footsoldiers')) footsoldiersCount++;
         if (square.classList.contains('supplies')) suppliesCount++;
         if (square.classList.contains('knights')) knightsCount++;
-        if (square.classList.contains('templars')) templarsCount++;
+        if (square.classList.contains('generals')) generalsCount++;
         }
         if (square.classList.contains('lost')) {
             square.classList.add('hit');
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let templarFootsoldiersCount = 0;
     let templarSuppliesCount = 0;
     let templarKnightsCount = 0;
-    let templarTemplarsCount = 0;
+    let templarGeneralsCount = 0;
 
     function templarGo() {
         let random = Math.floor(Math.random() * assassinsSquares.length);
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (assassinsSquares[random].classList.contains('footsoldiers')) templarFootsoldiersCount++;
             if (assassinsSquares[random].classList.contains('supplies')) templarSuppliesCount++;
             if (assassinsSquares[random].classList.contains('knights')) templarKnightsCount++;
-            if (assassinsSquares[random].classList.contains('templars')) templarTemplarsCount++;
+            if (assassinsSquares[random].classList.contains('generals')) templarGeneralsCount++;
             checkWins();
         } else templarGo();
             currentPlayer = 'assassin';
@@ -277,34 +277,34 @@ document.addEventListener('DOMContentLoaded', () => {
             knightsCount = 40;
         }
         if (templarsCount === 5) {
-            infoDisplay.innerHTML = 'You destroyed the Templars templars!';
-            templarsCount = 50;
+            infoDisplay.innerHTML = 'You destroyed the Templars generals!';
+            generalsCount = 50;
         }
         if (templarLookoutpostCount === 2) {
-            infoDisplay.innerHTML = 'You destroyed the Templars lookoutpost!';
+            infoDisplay.innerHTML = 'Templar destroyed the Assassins lookoutpost!';
             templarLookoutpostCount = 10;
         }
         if (templarFootsoldiersCount === 3) {
-            infoDisplay.innerHTML = 'You destroyed the Templars footsoldiers!';
+            infoDisplay.innerHTML = 'Templar destroyed the Assassins footsoldiers!';
             templarFootsoldiersCount = 20;
         }
         if (templarSuppliesCount === 3) {
-            infoDisplay.innerHTML = 'You destroyed the Templars supplies!';
+            infoDisplay.innerHTML = 'Templar destroyed the Assassins supplies!';
             templarSuppliesCount = 30;
         }
         if (templarKnightsCount === 4) {
-            infoDisplay.innerHTML = 'You destroyed the Templars knights!';
+            infoDisplay.innerHTML = 'Templar destroyed the Assassins knights!';
             templarKnightsCount = 40;
         }
         if (templarTemplarsCount === 5) {
-            infoDisplay.innerHTML = 'You destroyed the Templars knights!';
-            templarTemplarsCount = 50;
+            infoDisplay.innerHTML = 'Templar destroyed the Assassins generals!';
+            templarGeneralsCount = 50;
         }
-        if ((lookoutpostCount + footsoldiersCount + suppliesCount + knightsCount + templarsCount) === 150) {
+        if ((lookoutpostCount + footsoldiersCount + suppliesCount + knightsCount + generalsCount) === 150) {
             infoDisplay.innerHTML = "Assassin Wins!";
             gameOver()
         }
-        if ((templarLookoutpostCount + templarFootsoldiersCount + templarSuppliesCount + templarKnightsCount + templarTemplarsCount) === 150) {
+        if ((templarLookoutpostCount + templarFootsoldiersCount + templarSuppliesCount + templarKnightsCount + templarGeneralsCount) === 150) {
             infoDisplay.innerHTML = "Templar Wins!";
             gameOver()
         }
