@@ -97,7 +97,6 @@ p {
     margin: 2vmin;
     margin-top: 8em;
     display: grid;
-    background-color: #00cf35;
     /*code from webdev simplified*/
     grid-template-rows: repeat(10, 4.6vmin);
     grid-template-columns: repeat(10, 4.6vmin);
@@ -107,8 +106,16 @@ p {
     border: 1px solid hsla(0, 0%, 100%, .4)
 }
 
+.grid-assassin {
+    background-color: #44a6c6;
+}
+
+.grid-templar {
+    background-color: #ac27d1;
+}
+
 .grid-templar > .lost {
-    background-color: #00cf35 !important;
+    background-color: #ac27d1 !important;
     border-radius: 0 !important;
 }
 
@@ -134,6 +141,10 @@ p {
 
 .hit::after {
     background-color:#FF7700;
+}
+
+.armies-display {
+    background-color: #DE3163;
 }
 
 .lookoutpost-container {
