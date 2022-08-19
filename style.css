@@ -26,6 +26,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 2em;
     margin-bottom: 4rem;
     height: 1vh;
 }
@@ -44,6 +45,12 @@ p {
     text-align: center;
     margin-left: 2em;
     margin-right: 2em;
+}
+
+#text {
+    margin-left: 100px;
+    margin-right: 100px;
+    line-height: 2em;
 }
 
 .hidden-info {
@@ -91,6 +98,7 @@ p {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 100px;
 }
 
 .grid {
@@ -258,5 +266,6 @@ p {
 }
 
 .generals {
-    background-color: red;
+    background-color: #ac27d1;
+    border-radius: 5px;
 }
