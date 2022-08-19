@@ -54,7 +54,7 @@ p {
 }
 
 .button {
-    background-color: #b8860b;
+    background-color: #72bcd4;
     font-family: Montserrat;
     font-size: 1.5em;
     color: white;
@@ -65,7 +65,7 @@ p {
 }
 
 .button:hover {
-    background-color: #ffd700;
+    background-color: #d580ff;
     color: white;
     text-shadow: 1px 1px black;
 }
