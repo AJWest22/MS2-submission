@@ -107,13 +107,6 @@ p {
     border: 1px solid hsla(0, 0%, 100%, .4)
 }
 
-.grid-display {
-    width: 400px;
-    height: 400px;
-    margin: 20px;
-    background-color: #008000;
-}
-
 .grid-templar > .lost {
     background-color: #00cf35 !important;
     border-radius: 0 !important;
@@ -164,7 +157,8 @@ p {
     width: 120px;
     height: 40px;
     background-color: yellow;
-    margin: 20px;
+    margin-top: 80px;
+    margin-left: 1px;
     display: flex;
 }
 
@@ -181,7 +175,8 @@ p {
     width: 120px;
     height: 40px;
     background-color: pink;
-    margin: 20px;
+    margin-top: 140px;
+    margin-left: 1px;
     display: flex;
 }
 
@@ -198,7 +193,8 @@ p {
     width: 160px;
     height: 40px;
     background-color: black;
-    margin: 20px;
+    margin-top: 200px;
+    margin-left: 1px;
     display: flex;
 }
 
@@ -211,15 +207,16 @@ p {
     flex-wrap: wrap;
 }
 
-.templars-container {
+.generals-container {
     width: 200px;
     height: 40px;
     background-color: #f70d1a;
-    margin: 20px;
+    margin-top: 260px;
+    margin-left: 1px;
     display: flex;
 }
 
-.templars-vertical-container {
+.generals-vertical-container {
     width: 40px;
     height: 200px;
     background-color: #f70d1a;
