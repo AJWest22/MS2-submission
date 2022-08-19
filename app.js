@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const assassinsGrid = document.querySelector('.grid-assassin');
     const templarsGrid = document.querySelector('.grid-templar');
-    const gridDisplay = document.querySelector('.grid-display');
+    const armiesDisplay = document.querySelector('.armies-display');
     const armies = document.querySelectorAll('.army');
     const lookoutPost = document.querySelector('.lookoutpost-container');
     const footSoldiers = document.querySelector('.footsoldiers-container');
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } else return;
   
-      gridDisplay.removeChild(draggedArmy);
+      armiesDisplay.removeChild(draggedArmy);
     }
 
     function dragEnd() {
