@@ -152,13 +152,12 @@ p {
 }
 
 .armies-display {
-    background-color: #DE3163;
+    background-color: #ac27d1;
 }
 
 .lookoutpost-container {
     width: 80px;
     height: 40px;
-    background-color: brown;
     margin: 20px;
     display: flex;
 }
@@ -166,7 +165,6 @@ p {
 .lookoutpost-vertical-container{
     width: 40px;
     height: 80px;
-    background-color: brown;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -175,7 +173,6 @@ p {
 .footsoldiers-container {
     width: 120px;
     height: 40px;
-    background-color: yellow;
     margin-top: 80px;
     margin-left: 1px;
     display: flex;
@@ -184,7 +181,6 @@ p {
 .footsoldiers-vertical-container {
     width: 40px;
     height: 120px;
-    background-color: yellow;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -193,7 +189,6 @@ p {
 .supplies-container {
     width: 120px;
     height: 40px;
-    background-color: pink;
     margin-top: 140px;
     margin-left: 1px;
     display: flex;
@@ -202,7 +197,6 @@ p {
 .supplies-vertical-container {
     width: 40px;
     height: 120px;
-    background-color: pink;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -211,7 +205,6 @@ p {
 .knights-container {
     width: 160px;
     height: 40px;
-    background-color: black;
     margin-top: 200px;
     margin-left: 1px;
     display: flex;
@@ -220,7 +213,6 @@ p {
 .knights-vertical-container {
     width: 40px;
     height: 160px;
-    background-color: black;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -229,7 +221,6 @@ p {
 .generals-container {
     width: 200px;
     height: 40px;
-    background-color: #f70d1a;
     margin-top: 260px;
     margin-left: 1px;
     display: flex;
@@ -238,7 +229,6 @@ p {
 .generals-vertical-container {
     width: 40px;
     height: 200px;
-    background-color: #f70d1a;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -249,20 +239,34 @@ p {
     height: 40px;
 }
 
+.army {
+    background-color:#44a6c6;
+}
+
+
 .lookoutpost {
-    background-color: brown;
+    background-color: #ac27d1;
+    content: 'Lookout post';
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}
+
+.lookoutpost-assassin {
+    content: 'Lookout post';
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
 }
 
 .footsoldiers {
-    background-color: yellow;
+    background-color: #ac27d1;
 }
 
 .supplies {
-    background-color: pink;
+    background-color: #ac27d1;
 }
 
 .knights {
-    background-color: black;
+    background-color: #ac27d1;
 }
 
 .generals {

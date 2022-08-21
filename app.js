@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPlayer = 'assassin';
     
 
-    //creates the Fort's squares code from Ania Kubow battleships game
+    //creates the Fort's squares
     function createBoard(grid, squares) {
         for (let i = 0; i < width*width; i++) {
           const square = document.createElement('div');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createBoard(assassinsGrid, assassinsSquares);
     createBoard(templarsGrid, templarSquares);
 
-    // army squads generate randomly code from Ania Kubow battleships game
+    // army squads generate randomly
     const armyArray = [
         {
             name: 'lookoutpost',
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ];
 
-    //Randomly places the templars army code from Ania Kubow battleships game
+    //Randomly places the templars army
     function generate(army) {
         let randomPosition = Math.floor(Math.random() * army.directions.length);
         let current = army.directions[randomPosition];
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generate(armyArray[3]);
     generate(armyArray[4]);
 
-    //makes the players (assassin's) armies rotate code from Ania Kubow battleships game
+    //makes the players (assassin's) armies rotate
 
     function rotate() {
         if (isHorizontal) {
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     rotateButton.addEventListener('click', rotate);
 
-    //makes the players (assassin's) armies draggable code from Ania Kubow battleships game
+    //makes the players (assassin's) armies draggable
 
     armies.forEach(army => army.addEventListener('dragstart', dragStart));
     assassinsSquares.forEach(square => square.addEventListener('dragstart', dragStart));
@@ -186,13 +186,14 @@ document.addEventListener('DOMContentLoaded', () => {
       } else return;
   
       armiesDisplay.removeChild(draggedArmy);
+      if(!displayGrid.querySelector('.army')) allArmiesPlaced = true
     }
 
     function dragEnd() {
         console.log('dragend');
     }
 
-    //The gameplay logic code from Ania Kubow battleships game
+    //Game play logic
 
     function gamePlay() {
         if (isGameOver) return;
@@ -210,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     attackButton.addEventListener('click', gamePlay);
 
-    //reveals whether a hit has been successful or not code from Ania Kubow battleships game
+    //reveals whether a hit has been successful or not
     let lookoutpostCount = 0;
     let footsoldiersCount = 0;
     let suppliesCount = 0;
@@ -235,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gamePlay();
     }
 
-    //Gameplay logic for the templar's (computer's) turn code from Ania Kubow battleships game
+    //Gameplay logic for the templar's (computer's) turn
     let templarLookoutpostCount = 0;
     let templarFootsoldiersCount = 0;
     let templarSuppliesCount = 0;
@@ -258,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             turnDisplay.innerHTML = 'Assassin Go';
     }
 
-    //checks for the winner code from Ania Kubow battleships game
+    //checks for the winner
     function checkWins() {
         if (lookoutpostCount === 2) {
             infoDisplay.innerHTML = 'You destroyed the Templars lookoutpost!';
@@ -276,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
             infoDisplay.innerHTML = 'You destroyed the Templars knights!';
             knightsCount = 40;
         }
-        if (templarsCount === 5) {
+        if (generalsCount === 5) {
             infoDisplay.innerHTML = 'You destroyed the Templars generals!';
             generalsCount = 50;
         }
@@ -296,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
             infoDisplay.innerHTML = 'Templar destroyed the Assassins knights!';
             templarKnightsCount = 40;
         }
-        if (templarTemplarsCount === 5) {
+        if (templarGeneralsCount === 5) {
             infoDisplay.innerHTML = 'Templar destroyed the Assassins generals!';
             templarGeneralsCount = 50;
         }
@@ -310,7 +311,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    //ends the game code from Ania Kubow battleships game
+    //ends the game
+
     function gameOver() {
         isGameOver = true;
         attackButton.removeEventListener('click', gamePlay);
