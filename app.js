@@ -210,6 +210,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    attackButton.addEventListener('click', gamePlay)
+
     //reveals whether a hit has been successful or not
     let lookoutpostCount = 0;
     let footsoldiersCount = 0;
