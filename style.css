@@ -98,12 +98,19 @@ p {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 200px;
+}
+
+.hidden-info {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
 
 .grid {
     margin: 2vmin;
-    margin-top: 8em;
+    margin-bottom: 6px;
+    margin-top: 4em;
     display: grid;
     /*code from webdev simplified*/
     grid-template-rows: repeat(10, 4.6vmin);
@@ -174,7 +181,6 @@ p {
     width: 120px;
     height: 40px;
     margin-top: 80px;
-    margin-left: 1px;
     display: flex;
 }
 
@@ -190,7 +196,6 @@ p {
     width: 120px;
     height: 40px;
     margin-top: 140px;
-    margin-left: 1px;
     display: flex;
 }
 
@@ -206,7 +211,6 @@ p {
     width: 160px;
     height: 40px;
     margin-top: 200px;
-    margin-left: 1px;
     display: flex;
 }
 
@@ -222,7 +226,6 @@ p {
     width: 200px;
     height: 40px;
     margin-top: 260px;
-    margin-left: 1px;
     display: flex;
 }
 
@@ -241,6 +244,7 @@ p {
 
 .army {
     background-color:#44a6c6;
+    border-radius: 25px;
 }
 
 
@@ -271,5 +275,4 @@ p {
 
 .generals {
     background-color: #ac27d1;
-    border-radius: 5px;
 }

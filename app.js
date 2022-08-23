@@ -196,6 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Game play logic
 
     function gamePlay() {
+
         if (isGameOver) return;
         if (currentPlayer === 'assassin') {
             turnDisplay.innerHTML = 'Assassins Go';
@@ -208,8 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout (templarGo, 1000);
         }
     }
-
-    attackButton.addEventListener('click', gamePlay);
 
     //reveals whether a hit has been successful or not
     let lookoutpostCount = 0;
